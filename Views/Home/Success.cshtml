@@ -1,0 +1,16 @@
+﻿@{
+    ViewData["Title"] = "Privacy Policy";
+}
+<div class="container">
+    <div class="align-items-end">
+        <form method="post" asp-action="ProcessLogout" asp-controller="Home">
+            <button type="submit" name="logout" value="logout">Log Out</button>
+        </form>
+    </div>
+    <div class="row">
+        <div class="col-12 text-center">
+            <h1>Success!</h1>
+            <p>@Context.Session.GetString("Email")</p>
+        </div>
+    </div>
+</div>
